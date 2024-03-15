@@ -1,0 +1,154 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="FAQ.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <title>FAQS..</title>
+</head>
+    
+
+<body>
+    
+    <main class="questions">
+        <div class="navbar">
+            <div>
+                <a href="index.html"><img src="images/logo.png" class="navimage"></a>
+                <a href="book_appointment.html">BOOK APPOINTMENT</a>
+                <a href="blogpage.html">SERVICES</a>
+                <a href="review.html">REVIEWS</a>
+                <a href="faq's.html">FAQ'S</a>
+                <a href="team.html">ABOUT US</a>
+                <a href="user.html">LOGIN / SIGNUP</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+
+<div class="faq-heading"> <h1 >Frequently Asked Questions</h1></div>
+       
+        <!-- <img src="images/c3.jpg" class="faq-image"> -->
+        <input type="text" id="searchInput" placeholder="Search for a Question" class="search">
+        <button onclick="searchFAQ()" class="searchbtn"><i class="fa fa-search"></i></button>
+
+        <div class="faq-container" id="faq">
+            <div class="faq-one">
+                <h3 class="faq-page">What services does DiviCuts Salon offer?</h3>
+                <div class="faq-body">
+                    <p>
+                        DiviCuts Salon offers a wide range of services, including haircuts, styling, coloring, extensions, and various spa treatments. Our experienced stylists are trained to provide personalized services to meet your unique needs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-two">
+                <h3 class="faq-page">How can I schedule an appointment at DiviCuts Salon?</h3>
+                <div class="faq-body">
+                    <p>
+                        At DiviCuts Salon, we prioritize quality and use professional-grade hair care products. We partner with reputable brands known for their effectiveness and safety. Our stylists can also recommend products for at-home care based on your hair type and concerns.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="faq-three">
+                <h3 class="faq-page">How long does a typical haircut or styling session take at DiviCuts Salon?</h3>
+                <div class="faq-body">
+                    <p>
+                        The duration of a haircut or styling session can vary based on the specific services and your hair's complexity. On average, a haircut and styling session may take between 45 minutes to an hour. For more intricate treatments, our stylists will provide a more accurate time estimate during the consultation.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="faq-four">
+                <h3 class="faq-page"> Does DiviCuts Salon offer gift cards?</h3>
+                <div class="faq-body">
+                    <p>
+                        Yes, we do! Gift cards from DiviCuts Salon make for a thoughtful and versatile present. You can purchase them directly at our salon or through our website. Gift cards can be redeemed for any of our services or products.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-five">
+                <h3 class="faq-page">What safety measures does DiviCuts Salon have in place, especially considering the current health climate?</h3>
+                <div class="faq-body">
+                    <p>
+                        At DiviCuts Salon, we prioritize the health and safety of our clients and staff. We have implemented rigorous sanitation practices, including regular cleaning of equipment and stations. Our staff follows strict hygiene protocols, and we adhere to any local health guidelines or regulations. Additionally, we may have specific procedures in place, such as temperature checks or mask requirements, to ensure a safe salon environment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-six">
+                <h3 class="faq-page"> Can I consult with a stylist before deciding on a specific hair treatment or style?</h3>
+                <div class="faq-body">
+                    <p>
+                        Absolutely! At DiviCuts Salon, we encourage consultations. Our experienced stylists are more than happy to discuss your hair goals, concerns, and preferences before any treatment. This ensures that you and your stylist are on the same page, and you can make informed decisions about the best services for your needs..
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-seven">
+                <h3 class="faq-page">What is your cancellation policy, and are there any fees associated with missed appointments?</h3>
+                <div class="faq-body">
+                    <p>
+                        We understand that unforeseen circumstances may arise. If you need to cancel or reschedule your appointment, we appreciate advance notice. Our cancellation policy and any associated fees may vary, so we recommend checking with our front desk or referring to our website for specific details.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-eight">
+                <h3 class="faq-page">Are children welcome at DiviCuts Salon, and do you offer special services for them?</h3>
+                <div class="faq-body">
+                    <p>
+                        Yes, children are welcome at DiviCuts Salon! We provide a friendly and family-oriented environment. Our stylists are experienced in working with children of all ages. Additionally, we offer special services tailored to meet the needs of our younger clients, ensuring a positive and enjoyable salon experience for them.
+                    </p>
+                </div>
+            </div>
+    
+        </div>
+        <br><br><br><br>
+    </main>
+
+
+
+    <script>
+        var faq = document.getElementsByClassName("faq-page");
+        var i;
+        for (i = 0; i < faq.length; i++) {
+            faq[i].addEventListener("click", function () {
+                if (this.nextElementSibling.style.display === "block") {
+                    this.nextElementSibling.style.display = "none";
+                } else {
+                    this.nextElementSibling.style.display = "block";
+                }
+            });
+        }
+
+        function searchFAQ() {
+            var input, filter, faq, questions, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            faq = document.getElementById('faq');
+            questions = faq.getElementsByClassName('faq-page');
+
+            for (i = 0; i < questions.length; i++) {
+                txtValue = questions[i].textContent || questions[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    questions[i].style.display = "block";
+                } 
+                else {
+                    questions[i].style.display = "none";
+                }
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

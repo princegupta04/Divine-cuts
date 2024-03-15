@@ -1,0 +1,126 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="user.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div>
+                <a href="index.html"><img src="images/logo.png" class="navimage"></a>
+                <a href="book_appointment.html">BOOK APPOINTMENT</a>
+                <a href="blogpage.html">SERVICES</a>
+                <a href="review.html">REVIEWS</a>
+                <a href="faq's.html">FAQ'S</a>
+                <a href="team.html">ABOUT US</a>
+                <a href="user.html">LOGIN / SIGNUP</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    <div class="box">
+        <h2>USER AUTHENTICATION</h2>
+
+        <div class="flip-container">
+            <img src="images/user.jpeg" class="user-img">
+            <div class="flipper">
+                <div id="registrationForm" class="hidden">
+                    <h3>Register</h3>
+                    <form>
+                        <table>
+                            <tr>
+                                <!-- <td><label for="name">Name:</label></td> -->
+                                <td><input type="text" id="name" placeholder="Name:" name="name" required></td>
+                            </tr>
+
+                            <tr>
+                                <!-- <td><label for="mail">Email:</label></td> -->
+                                <td><input type="email" id="mail" placeholder="Email:" name="mail" required></td>
+                            </tr>
+
+                            <tr>
+                                <!-- <td><label for="contact">Contact:</label></td> -->
+                                <td><input type="text" id="contact" placeholder="Contact:" name="contact" required></td>
+                            </tr>
+
+                            <tr>
+                                <!-- <td><label for="pwd">Password:</label></td> -->
+                                <td><input type="password" id="pwd" placeholder="Password:" name="pwd" required></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"><button type="button" onclick="registerUser()"
+                                        class="btn">Register</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"><button onclick="flipForms()" class="btn2">Already have an
+                                        account?</button>
+                                </td>
+                            </tr>
+
+                        </table>
+                    </form>
+                </div>
+
+                <div id="loginForm" class="visible">
+                    <h3>Login</h3>
+                    <form>
+                        <table>
+                            <tr>
+                                <!-- <td><label for="loginMail">Email:</label></td> -->
+                                <td><input type="email" id="loginMail" placeholder="Email:" name="loginMail" required></td>
+                            </tr>
+
+                            <tr>
+                                <!-- <td><label for="loginPwd">Password:</label></td> -->
+                                <td><input type="password" id="loginPwd" placeholder="Password:" name="loginPwd" required></td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"><button type="button" onclick="loginUser()" class="btn">Login</button>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td colspan="2"><button onclick="flipForms()" class="btn2">Don't have an
+                                        account?</button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <td colspan="2"><button type="button" onclick="logout()" class="btn">Logout</button></td>
+
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

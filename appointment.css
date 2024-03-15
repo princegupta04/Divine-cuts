@@ -1,0 +1,186 @@
+*{
+    font-family: 'Space Grotesk', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    position: relative;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.wrapper::before {
+    content: '';
+    background-image: url("images/book.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(3px) brightness(60%);
+    z-index: -1;
+}
+
+.navbar {
+    background-color: rgb(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+}
+
+.navimage {
+    height: 3vh;
+    width: 15vh;
+}
+
+.navbar a:hover {
+    color: rgb(211, 149, 73);
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.social-icons {
+    float: right;
+    margin-right: 3lvw;
+}
+
+.social-icons a {
+    color: white;
+    text-decoration: none;
+    margin-left: 0.2lvw;
+    font-size: 20px;
+}
+
+.r {
+    letter-spacing: 0.2em;
+    color: white;
+    font-size: 5vh;
+}
+
+#appointment {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 0 10%;
+    padding-top: 100px;
+
+}
+
+
+.grid {
+    color: white;
+    display: grid;
+    gap: 5vh 10vh;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+
+}
+@media (max-width:1000px) {
+    .grid{
+      grid-template-columns: repeat(1,1fr);
+      width: 50%;
+    }
+  }
+
+.ap form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ap form label,
+.v form label {
+    color: rgb(226, 226, 226);
+}
+
+.ap input,
+.ap select,
+.v input {
+    padding: 5px 20px 10px 5px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-bottom: 1px solid white;
+    box-sizing: border-box;
+    font-size: 20px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 7vh 1vh;
+}
+input::placeholder{
+    color: white;
+}
+
+.ap button,
+.v button {
+    margin: 1vh;
+    background-color: transparent;
+    border: 1px solid rgb(226, 226, 226);
+    color: rgb(226, 226, 226);
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.ap button:hover,
+.v button:hover {
+    cursor: pointer;
+    transform: scale(1.02);
+    color: black;
+    background-color: white;
+    transition-duration: 0.3s;
+    transition-timing-function: ease-in;
+}
+
+.v form {
+    width: 100%;
+}

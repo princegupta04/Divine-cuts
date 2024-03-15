@@ -1,0 +1,144 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Review.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <title>Revies Section..</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div>
+                <a href="index.html"><img src="images/logo.png" class="navimage"></a>
+                <a href="book_appointment.html">BOOK APPOINTMENT</a>
+                <a href="blogpage.html">SERVICES</a>
+                <a href="review.html">REVIEWS</a>
+                <a href="faq's.html">FAQ'S</a>
+                <a href="team.html">ABOUT US</a>
+                <a href="user.html">LOGIN / SIGNUP</a>
+            </div>
+            <div class="social-icons">
+                <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+            </div>
+        </div>
+    <div class="head">
+        <h1 class="rate-heading">Customer Reviews</h1>
+    </div>
+    <div class="rating-summary">
+        <div class="rate-num">
+            <div class="stars">
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+                <span class="fa fa-star checked"></span>
+            </div>&emsp;
+            <p>4.7 out of 5</p>ak
+        </div>
+        <p style="margin-top: 1px; font-size: 13px;">40 Customer Ratings</p>
+        <div class="rate-progress">
+            <div style="display: flex;">
+                <p>5 star</p><progress value="84" max="100"></progress>&emsp;<p>84%</p>
+            </div>
+            <div style="display: flex;">
+                <p>4 star</p><progress value="15" max="100"></progress>&emsp;<p>15%</p>
+            </div>
+            <div style="display: flex;">
+                <p>3 star</p><progress value="4" max="100"></progress>&emsp;<p>4%</p>
+            </div>
+            <div style="display: flex;">
+                <p>2 star</p><progress value="2" max="100"></progress>&emsp;<p>2%</p>
+            </div>
+            <div style="display: flex;">
+                <p>1 star</p><progress value="1" max="100"></progress>&emsp;<p>1%</p>
+            </div>
+        </div>
+    </div>
+    <button onclick="loadReviews()" class="loadbtn">Load Reviews</button>
+    <br><br>
+
+    <div id="reviews" class="reviews">
+        <div class="reviews-container"></div>
+    </div>
+
+    <button onclick="clearReviews()" class="loadbtn" style="display: none;" id="clearButton">Clear</button>
+
+    <br><br><br><br>
+
+    <script>
+        function loadReviews() {
+            var reviews = [
+                { text: "I recently visited Divine cuts for a haircut and color, and I couldn't be happier with the results. The stylists were not only friendly and welcoming but also highly skilled. They took the time to understand exactly what I wanted and offered valuable suggestions.", rating: 5, name: "Alex M." },
+                { text: "The salon itself has a modern and clean ambiance, creating a relaxing environment. The attention to detail during my hair treatment was impressive, and the end result exceeded my expectations. The staff was professional and made me feel pampered throughout the entire process.", rating: 5, name: "Sarah L." },
+                { text: "I highly recommend Divine cuts for anyone looking for top-notch hair services. I'll definitely be returning for future appointments..", rating: 4, name: "Mark D." },
+                { text: "My recent visit to Divine cuts was a bit of a mixed bag. On the positive side, the salon had a pleasant atmosphere, and the staff was courteous. However, I encountered some issues during my haircut. While the stylist was friendly, I felt that my specific requests weren't fully understood, resulting in a haircut that didn't quite match my expectations.", rating: 5, name: "Jason R." },
+                { text: "On a positive note, the salon manager promptly addressed my concerns when I brought them up. They offered a complimentary follow-up appointment to correct the haircut, which I appreciated. The customer service in handling the situation was commendable.", rating: 5, name: "Emily S." },
+                { text: "TWhen writing reviews, it's crucial to be honest and fair, providing details that can help others gauge the salon's strengths and areas that may need improvement.", rating: 5, name: "David K." },
+            ];
+
+            var reviewsContainer = document.querySelector('.reviews-container');
+            reviewsContainer.innerHTML = "";
+
+            for (var i = 0; i < reviews.length; i++) {
+                var review = document.createElement('div');
+                review.classList.add('review-container');
+
+                var reviewText = document.createElement('p');
+                reviewText.classList.add('review-text');
+                reviewText.textContent = reviews[i].text;
+                review.appendChild(reviewText);
+
+                var ratingStars = document.createElement('div');
+                ratingStars.classList.add('rating-stars');
+                for (var j = 0; j < reviews[i].rating; j++) {
+                    var star = document.createElement('span');
+                    star.classList.add('fa', 'fa-star', 'checked');
+                    ratingStars.appendChild(star);
+                }
+                review.appendChild(ratingStars);
+
+                var userName = document.createElement('p');
+                userName.classList.add('user-name');
+                userName.textContent = reviews[i].name;
+                review.appendChild(userName);
+
+                var userImage = document.createElement('img');
+                userImage.classList.add('user-image');
+                userImage.src = 'images/user.jpg';
+                userImage.alt = 'User Image';
+                review.appendChild(userImage);
+
+                reviewsContainer.appendChild(review);
+            }
+
+            var clearButton = document.getElementById('clearButton');
+            clearButton.style.display = 'block';
+
+        }
+
+        function clearReviews() {
+            var reviewsContainer = document.getElementById('reviews');
+            reviewsContainer.innerHTML = "";
+
+            var clearButton = document.getElementById('clearButton');
+            clearButton.style.display = 'none';
+        }
+
+    </script>
+</div>
+</body>
+
+</html>
+
+</body>
+
+</html>

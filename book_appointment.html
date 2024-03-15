@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="appointment.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/x-icon" href="images/logo.webp">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Appointment</title>
+</head>
+
+<body>
+    
+    <div class="container">
+        <div class="wrapper">
+            <div class="navbar">
+                <div>
+                    <a href="index.html"><img src="images/logo.png" class="navimage"></a>
+                    <a href="book_appointment.html">BOOK APPOINTMENT</a>
+                    <a href="blogpage.html">SERVICES</a>
+                    <a href="review.html">REVIEWS</a>
+                    <a href="faq's.html">FAQ'S</a>
+                    <a href="team.html">ABOUT US</a>
+                    <a href="user.html">LOGIN / SIGNUP</a>
+                </div>
+                <div class="social-icons">
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+            <div>
+                <h1 class="r">BOOK YOUR APPOINTMENT</h1>
+            </div>
+        </div>
+
+        <div id="appointment" class="ap">
+            <form>
+                <div class="grid">
+                    <div class="1"><input type="text" id="name" placeholder="Name*" name="name" required></div>
+                    <div class="2"><input type="email" id="email" placeholder="Email*" name="email" required></div>
+                    <div class="3"><input type="number" id="num" placeholder="Phone Number*" name="phone" required></div>
+                    <div class="4"><select id="service" name="service" required>
+                            <option value="">--Select required service(s)--</option>
+                            <option value="haircut">Haircut</option>
+                            <option value="makeup">Makeup</option>
+                            <option value="coloring">Coloring/Styling</option>
+                            <option value="skincare">Skin Care</option>
+                            <option value="haircare">Hair Care</option>
+                        </select></div>
+                    <div class="5"><input type="date" placeholder="Select Date" id="date" name="date" required></div>
+                    <div class="6"><input type="time" id="time" placeholder="Select Time" name="time" required></div>
+                </div>
+                <div class="buttons">
+                    <button type="button" onclick="bookAppointment()">BOOK APPOINTMENT</button>
+                    <button type="reset">Clear</button></div>
+            </form>
+            <div class="v">
+                <h2>View / Delete your Appointment</h2>
+                <form>
+                    <input type="text" id="name2" placeholder="Enter Name:" name="name2" required>
+                    <div class="buttons"> <button type="button" onclick="viewAppointment()">View</button>
+                    <button type="button" onclick="delAppointment()">Delete</button>
+                   </div>
+                </form>
+            </div>
+        </div>
+   
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
